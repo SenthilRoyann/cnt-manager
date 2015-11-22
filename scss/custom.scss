@@ -1,0 +1,137 @@
+/*
+File : custom.css
+Author: Senthil Royan
+*/
+
+@import "variables.scss";
+
+/* COMMON
+-------------------------------- */
+
+.alignMargins { padding-left: 0px; padding-right: 0px; }
+.underLine { border-bottom: 1px solid $lightGrey; padding-bottom: 5px; padding-right: 0px; }
+.container { padding-left: 0px; padding-right: 0px; }
+
+/* HEADER
+-------------------------------- */
+header {
+	.navbar { background: $bkgDarkBlue; border-radius: 0px; padding: 10px 0px 10px 0px;
+		    margin-bottom: 0px;
+		h3 {
+			color: $white; margin: 10px 0px 10px 0px; font-size: 30px;
+		}
+		h5 { color: $lightBlue; }
+
+	}
+} // header /
+
+
+/* SECTION .pageHeader
+-------------------------------- */
+section.pageHeader {
+	margin-top: 20px; padding-bottom: 20px;
+	.container {
+		padding-right: 0px; padding-bottom: 10px;
+		h4 {
+			color: $darkGrey;
+		}
+		a.btn {
+			margin-right: 5px; margin-bottom: 5px;
+		}
+
+		a.addContact {
+			margin-bottom: 10px;
+			padding: 8px 40px 8px 40px; font-weight: bold; text-transform: uppercase;
+			span { font-size: 12px; padding-left: 5px; }
+		}
+		input.form-control { padding-right: 35px; }
+		i.form-control-feedback { right: 20px; color: $lightGrey; }
+	}
+}
+
+
+/* SECTION .customerList
+-------------------------------- */
+section.customerList {
+	ul.list-unstyled li {
+	}
+	.panel {
+		.panel-heading {
+			background: $bkgDarkBlue;
+			color: $white;
+			span {
+				font-weight: bold;
+			}
+			a span.glyphicon { color: $white; font-weight: normal; }
+		}
+		.panel-body {
+			img {
+				border: 1px solid #ddd;
+				border-radius: 100px;
+				display: inline-block;
+				padding: 4px;
+				-webkit-transition: all .2s ease-in-out;
+				-o-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+			}
+			span.cyan {
+				color: #428BCA;
+			}
+		}
+	}
+}
+
+/* SECTION .formControl
+-------------------------------- */
+
+section.formControl {
+	.form-group {
+		margin-bottom:25px; 
+		button {
+			padding: 10px 30px; margin-right: 20px;
+		}
+		.pull-right { margin-top: 10px; }
+	}
+}
+
+
+
+/* Media quries
+-------------------------------- */
+@media(max-width:768px) {
+
+	/* COMMON
+	------------------------
+	*/
+
+   .container {
+   	padding-left: 15px; padding-right: 15px;
+   }
+
+   /* SECTION
+   ------------------------
+   */
+
+   section.pageHeader {
+   		.container {
+		   a.addContact {
+				margin: 10px 0px 15px 0px;
+			}
+			input.form-control {
+				margin: 5px 0px 15px 0px;
+			}
+			i.form-control-feedback { top: 4px; }
+   		}
+   }
+}
+
+
+
+footer.footer {
+	background: $footerBlack; color: $darkGrey; padding: 10px 0px 10px 0px;
+	a { color: $lightGrey;
+		&:hover{
+			color: $lightGrey;
+		}
+	}
+}

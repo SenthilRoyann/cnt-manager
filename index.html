@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="contactMgr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Main Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+	<div ng-controller="contactCtrl">
+
+<!--
+		HEADER
+		=================== -->
+
+		<header>
+			<nav class="navbar navbar-default-navbar-fixed-top">
+					<div class="container">
+							<h3><span class="glyphicon glyphicon-check"></span> Contact Manager</h3>
+							<h5>Simple AngularJS Single Page Application</h5>
+					</div> <!-- .container / -->
+			</nav> <!-- .navbar / -->
+		</header> <!-- .header / -->
+
+
+<!--
+		NG-VIEW
+		=================== -->
+
+		<ng-view></ng-view>
+
+		</div> <!-- ng-controller="List" / -->
+
+
+<!--
+		FOOTER	
+		=================== -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h6 class="text-white">Sample Contact Manager, Done by Senthil Royan</h6>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h6 class="text-white pull-right">Contact: <a href="mailto:royan.jai@gmail.com" class="text-info">royan.jai@gmail.com</a>, +91-89046-95887</span></h6>
+				</div>
+			</div> <!-- .container / -->
+		</footer>
+
+		<!-- Angular JS -->
+		<script src="js/angular.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/angular-resource.js"></script>
+		 <!-- jQuery  -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Custom Script -->
+		<script src="js/app.js"></script>
+
+	</body>
+</html>

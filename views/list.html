@@ -1,0 +1,70 @@
+<!--
+		SECTION .pageHeader
+		=================== -->
+
+		<section class="pageHeader">
+			<div class="container underLine">
+				<h6 class="text-muted">Welcome <span class="text-success">{{contact.user}}</span>!</h6>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 alignMargins">
+					<h4 class="primary">List of Contact Customer Details <span class="label label-warning">{{contact.Records.length}}</span></h4>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<a class="btn btn-danger btn-block text-center addContact" href="#/new">Add New <span class="glyphicon glyphicon-plus"></span> </a>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<input type="search" ng-model="search" class="form-control pull-right" placeholder="Search by Name">
+						<i class="form-control-feedback glyphicon glyphicon-search"></i>
+				</div>
+
+			</div> <!-- .container / -->
+
+		</section> <!-- .pageHeader / -->
+
+<!--
+		SECTION .customerList
+		===================== -->
+
+		<section class="customerList">
+			<div class="container">
+
+										
+					<ul class="list-unstyled">
+						<!-- list-inline -->
+
+						<li ng-repeat="Record in contact.Records | filter:search">
+
+							<div class="col-lg-4 col-md-6 col-sm-6 col-sm-12">
+								
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<span class="panel-title">{{Record.name}}</span>
+										<div class="pull-right">
+											<a href="#/edit/{{$index}}"><span class="glyphicon glyphicon-pencil"></span></a>
+											<a href="#" ng-click="remove($index)"><span class="glyphicon glyphicon-trash"></span></a>
+										</div>
+									</div> <!-- .panel-heading / -->
+
+									<div class="panel-body">
+										<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 alignMargins">
+											<img src="images/img_01.png" alt="" class="img-circle">
+										</div>
+										<div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 alignMargins">
+											<ul class="list-unstyled">
+												<li>{{Record.area}}</li>
+												<li>{{Record.phone}}</li>
+												<li>{{Record.email}}</li>
+												<li><span class="cyan">{{Record.order}} Orders</span></li>
+											</ul>
+										</div>
+									</div> <!-- .panel-body / -->
+								</div>
+
+							</div> <!-- .col-lg-3 col-md-6 col-sm-6 col-sm-12 / -->
+
+						</li>
+
+					</ul> <!-- .list-unstyled / -->
+
+
+			</div> <!-- .container / -->
+		</section>
